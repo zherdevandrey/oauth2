@@ -1,0 +1,11 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: post-route
+#          uri: http://localhost:8081/
+#          predicates:
+#            - Path=/posts/**
+#          filters:
+#            - PrefixPath=/api
+#            - AddResponseHeader=X-Powered-By,Some Header
