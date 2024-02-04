@@ -11,7 +11,7 @@ import java.util.UUID;
 @RestController
 public class PostController {
 
-    @GetMapping("/api/posts")
+    @GetMapping("/messages")
     public List<Post> posts() {
         log.info("Get posts request");
         var post = new Post(UUID.randomUUID(), "post name");

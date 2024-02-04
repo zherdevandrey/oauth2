@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/form-auth-by-code/pom.xml" />
+        <option value="$PROJECT_DIR$/sso/pom.xml" />
+        <option value="$PROJECT_DIR$/redis-session/pom.xml" />
+        <option value="$PROJECT_DIR$/microservices/oauth-client/pom.xml" />
+        <option value="$PROJECT_DIR$/microservices/oauth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth-gateway/post-service/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth-gateway/gateway/pom.xml" />
+      </list>
+    </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="corretto-17" project-jdk-type="JavaSDK" />
+</project>
