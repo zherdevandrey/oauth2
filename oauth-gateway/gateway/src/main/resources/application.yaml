@@ -33,7 +33,7 @@ spring:
             client-id: my_client
             client-secret: s3O4Z38dKZFFhT4h2RxaoHN6n27WmpmQ
             authorization-grant-type: authorization_code
-            redirect-uri: "http://localhost:8083/posts"
+            redirect-uri: "http://localhost:8083/login/oauth2/code/gateway"
             scope: openid, message.read
         provider:
           my-provider:
