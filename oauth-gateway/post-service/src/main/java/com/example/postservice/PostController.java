@@ -17,4 +17,8 @@ public class PostController {
         var post = new Post(UUID.randomUUID(), "post name");
         return List.of(post);
     }
+
+    record Post(UUID id, String name) {
+    }
+
 }

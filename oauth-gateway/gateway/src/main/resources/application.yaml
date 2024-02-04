@@ -9,3 +9,6 @@
 #          filters:
 #            - PrefixPath=/api
 #            - AddResponseHeader=X-Powered-By,Some Header
+
+server:
+  port: 8081

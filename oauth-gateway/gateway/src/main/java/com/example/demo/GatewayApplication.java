@@ -18,13 +18,8 @@ public class GatewayApplication {
         return builder.routes()
                 .route(r -> r.path("/posts/**")
                         .filters(f ->
-                                f.addResponseHeader("X-TestHeader", "foobar"))
-                        .uri("http://localhost:8080")
-                )
-                .route(r -> r.path("/image/webp")
-                        .filters(f ->
-                                f.addResponseHeader("X-AnotherHeader", "baz"))
-                        .uri("http://httpbin.org:80")
+                                f.prefixPath("/api"))
+                        .uri("http://localhost:8082")
                 )
                 .build();
     }
