@@ -1,0 +1,41 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: post-route
+#          uri: http://localhost:8081/
+#          predicates:
+#            - Path=/posts/**
+#          filters:
+#            - PrefixPath=/api
+#            - AddResponseHeader=X-Powered-By,Some Header
+
+server:
+  port: 8083
+
+spring:
+  application.name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: resources
+          uri: http://localhost:8082/messages
+          predicates:
+            Path=/messages/**
+          filters:
+            TokenRelay=
+  security:
+    oauth2:
+      client:
+        registration:
+          gateway:
+            provider: my-provider
+            client-id: my_client
+            client-secret: s3O4Z38dKZFFhT4h2RxaoHN6n27WmpmQ
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://localhost:8083/login/oauth2/code/gateway"
+            scope: openid, message.read
+        provider:
+          my-provider:
+            issuer-uri: http://localhost:8080/auth/realms/my_realm
+
